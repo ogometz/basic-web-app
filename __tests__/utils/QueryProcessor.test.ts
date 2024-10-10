@@ -57,4 +57,20 @@ describe("QueryProcessor", () => {
             "1805"
           ));
     });
+
+    test('should do square cube function', () => {
+        const query = "Which of the following numbers is both a square and a cube: 1681, 2381, 729, 3218, 1728, 131, 3485?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "729"
+          ));
+    });
+
+    test('should do prime function', () => {
+        const query = "Which of the following numbers are primes: 8, 20, 4, 29, 39?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "29"
+          ));
+    });
 });
