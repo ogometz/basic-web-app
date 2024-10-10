@@ -33,4 +33,28 @@ describe("QueryProcessor", () => {
             "Owen Gometz"
           ));
     });
+    
+    test('should return largest number', () => {
+        const query = "Which of the following numbers is the largest: 14, 9, 62?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "62"
+          ));
+    });
+
+    test('should do addition', () => {
+        const query = "What is 51 plus 12?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "63"
+          ));
+    });
+
+    test('should do multiplication', () => {
+        const query = "What is 19 multiplied by 95?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "1805"
+          ));
+    });
 });
